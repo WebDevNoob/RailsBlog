@@ -1,0 +1,17 @@
+<%= form_for([@article, @article.tags.build]) do |f| %>
+<p>
+  <ul>
+  <% @article.errors.full_messages.each do |error| %>
+  <li><%= error %></li>
+  <% end %>
+  <ul>
+</p>
+<p>
+  <%= f.label :tag_list %><br>
+  <%= f.text_field :tag_list%>
+</p>
+
+<p>
+  <%= f.submit %>
+</p>
+<% end %>
